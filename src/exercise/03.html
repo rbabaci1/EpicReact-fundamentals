@@ -14,8 +14,9 @@
       className: 'container',
       children: 'Hello World',
     }) */
+    const props = {className: 'container', children: 'Hello World'}
 
-    const element = <div className="container">Hello World</div>
+    const element = <div {...props} />
 
     // 💰 there are a few subtle differences between JSX and HTML. One such
     // difference is how you apply a class to an element in JSX is by using
