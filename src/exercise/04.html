@@ -17,17 +17,19 @@
       )
     }
 
+    const element = (
+      <>
+        <Message greeting="Hello" subject="World" />
+        <Message greeting="Goodbye" subject="World" />
+      </>
+    )
+
     Message.propTypes = {
       subject: PropTypes.string.isRequired,
       greeting: PropTypes.string.isRequired,
     }
 
     // 💯 This is only the first step to making actual React components. The rest is in the extra credit!
-    ReactDOM.createRoot(document.getElementById('root')).render(
-      <>
-        <Message greeting="Hello" subject="World" />
-        <Message greeting="Goodbye" subject="World" />
-      </>,
-    )
+    ReactDOM.createRoot(document.getElementById('root')).render(element)
   </script>
 </body>
