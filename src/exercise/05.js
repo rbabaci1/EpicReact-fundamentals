@@ -31,8 +31,10 @@ function App() {
 }
 
 function Box({style, size, children}) {
+  const sizeClassName = size ? `box box--${size}` : 'box'
+
   return (
-    <div className={`box box--${size}`} style={{...style, fontStyle: 'italic'}}>
+    <div className={sizeClassName} style={{...style, fontStyle: 'italic'}}>
       {children}
     </div>
   )
