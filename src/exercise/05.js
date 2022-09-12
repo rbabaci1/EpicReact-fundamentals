@@ -21,9 +21,17 @@ const largeBox = <div className="box box--large">large orange box</div>
 function App() {
   return (
     <div>
-      {smallBox}
-      {mediumBox}
-      {largeBox}
+      <Box className="box--small" style={{backgroundColor: 'lightblue'}}>
+        small lightblue box
+      </Box>
+    </div>
+  )
+}
+
+function Box({className, style, children}) {
+  return (
+    <div className={className} style={{...style, fontStyle: 'italic'}}>
+      {children}
     </div>
   )
 }
